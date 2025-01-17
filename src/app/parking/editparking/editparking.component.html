@@ -1,0 +1,47 @@
+<div class="container-fluid mb-4 p-3 " style="background-color: rgb(255, 255, 255);">
+   
+    <div style="padding-left: 70px;"> Edit Parking Spot</div>
+
+</div>
+<div style="" class="container px-0">
+<div class="card ">
+    <div class="card-body">
+        <div class="col card-title" style="background-color: var(--first-color); padding: 16px; color: white;"> Edit Parking Spot<span class="badge bg-success" *ngIf='isVisible' style="margin-left: 12px;">Updated!</span></div>
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="name" class="form-label">Name of Parking Spot</label>
+                    <input type="email" class="form-control" id="name" [(ngModel)]="parkingSpotClass.name" placeholder="Enter name">
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="description" class="form-label"  >Distance</label>
+                    <input type="text" class="form-control" [(ngModel)]="parkingSpotClass.distance" id="description" placeholder="Enter description">
+                </div>
+                <div class="col-md-6 mt-2">
+                    <label for="location" class="form-label">Location</label>
+                    <input type="text" class="form-control" id="location" [(ngModel)]="parkingSpotClass.location" placeholder="Enter location">
+                </div>
+                <div class="col-md-6">
+                    <label for="price" class="form-label">Price</label>
+                    <input type="text" class="form-control" id="price" [(ngModel)]="parkingSpotClass.price" placeholder="Enter price">
+                </div>
+                <div class="col-md-6">
+                    <label for="description" class="form-label">Description</label>
+                    <textarea class="form-control" id="description" [(ngModel)]="parkingSpotClass.description" placeholder="Enter description"></textarea>
+                </div>
+
+                
+                
+                <div class="gap-2 mt-3 text-end">
+                    <button class="btn  me-1  " (click)="updateParkingSpot()" style="background-color: var(--first-color); color: aliceblue;">Update</button>
+                </div>
+
+                
+            </div>
+        </div>
+
+        
+        
+    </div>
+</div>
+</div>

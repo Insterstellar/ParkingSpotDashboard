@@ -1,0 +1,146 @@
+<div class="container-fluid mb-4 p-3 " style="background-color: rgb(255, 255, 255);">
+   
+    <div style="padding-left: 70px;"> Edit Parking Spot</div>
+    
+
+
+</div>
+
+
+<main>
+    <section >
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header text-white" style="background-color: var(--first-color);">
+                        <h5 class="card-title">Add Parking Spot Details</h5>
+                    </div>
+                
+
+                    
+                 <div class="card-body">
+                        <div class="row">
+                            <div class="row mb-2">
+                                <div class="row">
+
+                                    <div class="col-md-4" *ngIf="gallery.length<=0">
+                                        <div class="thumbnail">
+                                          <!--<a href="/w3images/lights.jpg">-->
+                                            <img [src]="imageAddress" [alt]="imageAddress" style="width:100%; object-fit: cover; height: 200px; ">
+                                            <div class="caption">
+                                              <p class="tex-center"></p>
+                                            </div>
+                                          <!--</a>-->
+                                        </div>
+                                      </div>
+                                      
+                                   
+                                    <!--<img  [src]="imageAddress" alt="" class="card-img-top" style="height: 200px !important; width: 100%; object-fit: cover; ">-->
+                                    <div class="col-md-4" *ngFor="let gallery of gallery let i = index" >
+                                        <div class="thumbnail">
+                                          <!--<a href="/w3images/lights.jpg">-->
+                                            <img [src]="gallery.imageUrl" [alt]="imageAddress" style="width:100%; object-fit: cover; height: 200px; ">
+                                            <div class="caption">
+                                              <p class="tex-center">image {{1+i}}</p>
+                                            </div>
+                                          <!--</a>-->
+                                        </div>
+                                      </div>
+                                      <p *ngIf="gallery.length >= MAX_IMAGES">Max images reached: {{ gallery.length }}/{{ MAX_IMAGES }}</p>
+                                   
+                                   
+                                   
+                            
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <div class="card-body ">
+                                            <input #fileInput type="file" class="form-control" (change)="handleFileInput($event)" accept="image/*" multiple  style="display:none;"  >
+                                            <button class="btn text-white mb-2" style="background-color: var(--first-color);" (click)="fileInput.click()">Upload Images</button>
+                                            <p class="card-text">Recommended size: <b>800x800</b></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+
+                            </div>
+                       
+                            
+                            
+                            <div class="col-md-6">
+                                <label for="name" class="form-label" >Name of Parking Spot</label>
+                                <input type="email" class="form-control" id="name" [(ngModel)]="newParkingSpot.name" placeholder="Enter name">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="description" class="form-label"  >Distance</label>
+                                <input type="number" class="form-control" [(ngModel)]="newParkingSpot.distance" id="description" placeholder="Enter description">
+                            </div>
+                            <div class="col-md-6 mt-2">
+                                <label for="location" class="form-label">Location</label>
+                                <input type="text" class="form-control" id="location" [(ngModel)]="newParkingSpot.location" placeholder="Enter location">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="price" class="form-label">Price</label>
+                                <input type="text" class="form-control" id="price" [(ngModel)]="newParkingSpot.price" placeholder="Enter price">
+                            </div>
+                            <div class="col-md-6 mt-2">
+                                <div class="mb-4">Amenities <span class="badge bg-success" style="margin-left: 8px;"
+                                    *ngFor="let amenity of newAmenities">{{amenity.name}}</span></div>
+
+                                <select class="form-select"  [(ngModel)]="amenity" (change)="addAminity(amenity)">
+                                    <option value="EVCharging" selected>EVCharging</option>
+                                    <option value="FreeWifi">FreeWifi</option>
+                                    <option value="Parking">Parking</option>
+                                    <option value="Restroom">Restroom</option>
+                                    <option value="Shower">Shower</option>
+                                    <option value="Toilet">Toilet</option>
+                                    <option value="WashingMachine">WashingMachine</option>
+                                    <option value="lighting">lighting</option>
+                                    <option value="airconditioning">airconditioning</option>
+                                    <option value="elevator">elevator</option>
+
+                                    
+                                </select>
+                            </div>
+                           
+                           <!---- <div class="col-md-6">
+                                <label for="distance" class="form-label">Image Link 1</label>
+                                <input type="text" class="form-control" id="distance" [(ngModel)]="newParkingSpot.gallery[0].imageUrl" placeholder="Enter number of spots">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="distance" class="form-label">Image Link 2</label>
+                                <input type="text" class="form-control" id="distance" [(ngModel)]="newParkingSpot.gallery[1].imageUrl" placeholder="Enter number of spots">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="distance" class="form-label">Image Link 3</label>
+                                <input type="text" class="form-control" id="distance" [(ngModel)]="newParkingSpot.gallery[2].imageUrl" placeholder="Enter number of spots">
+                            </div>-->
+                            <div class="col-md-12">
+                                <label for="distance" class="form-label">Description</label>
+                                <textarea class="form-control" id="distance" [(ngModel)]="newParkingSpot.description" placeholder="Enter distance"></textarea>
+                            </div>
+
+                            
+                            
+                            <div class="gap-2 mt-3 text-end">
+                                <button class="btn  me-1  " (click)="addParkingSpot()" style="background-color: var(--first-color); color: aliceblue;">Add</button>
+                            </div>
+                        </div>
+
+
+                        
+                    </div>
+
+                </div>
+            </div>
+       
+          
+           
+
+        </div>
+      
+    </section>
+   
+  
+</main>

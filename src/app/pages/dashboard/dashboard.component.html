@@ -1,0 +1,172 @@
+
+<div class=" pt-3 pb-3 " style="background-color: white; padding-left: 80px; width: 100%;">
+    <div class="d-flex justify-content-between">
+      <div>DashBoard</div>
+      
+    </div>
+  </div>
+  <br>
+
+
+
+
+
+<main>
+    <section >
+        
+      <div class="row"> 
+        <div class="col-md-4 mb-2">
+          <div class="card text-bg-danger">
+          <div class="card-body">
+            <h5 class="card-title">Parking Spaces</h5>
+                    <h4 class="">{{ parkingspots.length }}</h4>
+                    <p class="card-text">12%</p>
+          </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-2">
+          <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Users</h5>
+                    <h4 class="">22</h4>
+                    <p class="card-text">12%</p>
+          </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-2">
+          <div class="card text-bg-success">
+          <div class="card-body">
+            <h5 class="card-title">Total Parking Spots</h5>
+                    <h4 class="">55</h4>
+                    <p class="card-text">12%</p>
+          </div>
+          </div>
+        </div>
+      
+      </div>
+            <br>
+
+
+
+
+            <div class="row ">
+              <div class="col-md-8 mb-2">
+                <div class="card">
+                  <div class="card-body">
+                   
+                      <h5 class="card-title">Users Overview</h5>
+                     
+                        <p-chart type="line" [data]="data" [options]="options" class="h-[30rem]" />
+                    
+                     
+                      </div>
+                </div>
+
+              </div>
+              <div class="col-md-4">
+                <div class="card">
+
+                
+                  <div class="card-body">
+                    <h5 class="card-title">Tickets</h5>
+                   <table class="table table-striped table table-responsive">
+                    <thead class="table-dark">
+                      <tr>
+                        <th>Ticket Id</th>
+                        <th>Complaint Id</th>
+                        <th>Date</th>
+                      </tr>
+                      </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>xgxyyyy111222</td>
+                        <!--<td>2022-01-01</td>-->
+                        <td>2025-01-01</td>
+                        
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>xgxyyyy111222</td>
+                        <!--<td>2022-01-01</td>-->
+                        <td>2025-01-01</td>
+                        
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>xgxyyyy111222</td>
+                        <!--<td>2022-01-01</td>-->
+                        <td>2025-01-01</td>
+                        
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>xgxyyyy111222</td>
+                     
+                      </tr>
+                      <tr>
+                         <!-- <td>5</td>
+                          -->
+                        <td>5</td>
+                        <td>xgxyyyy111222</td>
+                       
+                        <td>2025-01-01</td>
+                        
+                      </tr>
+                      <tr>
+                         <!-- <td>6</td>
+                          -->
+                        <td>6</td>
+                        <td>xgxyyyy111222</td>
+                       
+                        <td>2025-01-01</td>
+                        
+                      </tr>
+                      <tr>
+                         <!-- <td>7</td>
+                          -->
+                        <td>7</td>
+                        <td>xgxyyyy111222</td>
+                       
+                        <td>2025-01-01</td>
+                        
+                      </tr>
+                      <tr>
+                         <!-- <td>8</td>
+                          -->
+                        <td>8</td>
+                        <td>xgxyyyy111222</td>
+                       
+                        <td>2025-01-01</td>
+                        
+                      </tr>
+                      
+
+                      
+                      <ul>
+                        <li *ngFor="let item of amenityitems">
+                          {{ item.name }}
+                          {{ item.id }} - {{ item.name }}
+                        </li>
+                      </ul>
+
+
+
+                    </tbody>
+                   </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+            
+         
+    </section>
+</main>
+
+
+<!--card bottom left-->

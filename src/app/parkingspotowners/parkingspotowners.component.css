@@ -1,0 +1,15 @@
+.navColorActive {
+    background-color: var(--first-color);
+    color: white;
+}
+
+.navColorInactive {
+    background-color: var(--body-color);
+    color: grey;
+}
+
+.showcursor :hover {
+    cursor: pointer;
+}
+
+
