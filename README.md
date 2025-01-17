@@ -8,11 +8,7 @@ PrimeNg
 Bootstrap
 
 ## Screenshots
-![Screenshot](https://github.com/Mandy-Man/ParkingDashBoard/blob/main/Screenshots/Screenshot%201.png)
-![Screenshot](https://github.com/Mandy-Man/ParkingDashBoard/blob/main/Screenshots/Screenshot%202.png)
-![Screenshot](https://github.com/Mandy-Man/ParkingDashBoard/blob/main/Screenshots/Screenshot%203.png)
-![Screenshot](https://github.com/Mandy-Man/ParkingDashBoard/blob/main/Screenshots/Screenshot%204.png)
-![Screenshot](https://github.com/Mandy-Man/ParkingDashBoard/blob/main/Screenshots/Screenshot%205.png)
-![Screenshot](https://github.com/Mandy-Man/ParkingDashBoard/blob/main/Screenshots/Screenshot%206.png)
-![Screenshot](https://github.com/Mandy-Man/ParkingDashBoard/blob/main/Screenshots/Screenshot%207.png)
+![Image](https://github.com/user-attachments/assets/25af8e9b-f3ed-4c44-a30e-7cf1b344aeee)
+![Image](https://github.com/user-attachments/assets/64593d27-dfb4-445b-a764-f9c1399489e4)
+![Image](https://github.com/user-attachments/assets/91bf73d6-8f0b-49cf-8239-8bfedeebfc99)
 
